@@ -1,0 +1,87 @@
+[2023-12-11T10:48:16.354] [ERROR] application - undefined
+[2023-12-11T10:48:59.262] [ERROR] application - { code: 400, message: '参数错误', result: '' }
+[2023-12-11T10:52:53.149] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T10:53:59.952] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T10:55:35.745] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T10:56:19.215] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T11:16:53.365] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T11:19:21.710] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T11:19:21.714] [ERROR] application - ValidationError [SequelizeValidationError]: notNull Violation: user.username cannot be null
+    at InstanceValidator._validate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:50:13)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async InstanceValidator._validateAndRunHooks (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:60:7)
+    at async InstanceValidator.validate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:54:12)
+    at async model.save (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:2426:7)
+    at async Function.create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:1362:12)
+    at async create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:5:21)
+    at async register (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:73:21)
+    at async cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:16)
+    at async session (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-session\index.js:41:7) {
+  errors: [
+    ValidationErrorItem {
+      message: 'user.username cannot be null',
+      type: 'notNull Violation',
+      path: 'username',
+      value: null,
+      origin: 'CORE',
+      instance: [user],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2023-12-11T11:19:36.468] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T14:58:30.780] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T15:13:09.226] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T15:13:43.225] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T15:14:15.819] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T15:16:27.117] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T15:16:44.834] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T15:23:11.904] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T15:24:04.393] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T15:24:47.026] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T15:43:14.479] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T16:00:42.976] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T16:00:50.480] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T16:00:50.486] [ERROR] application - ValidationError [SequelizeValidationError]: notNull Violation: user.username cannot be null
+    at InstanceValidator._validate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:50:13)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async InstanceValidator._validateAndRunHooks (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:60:7)
+    at async InstanceValidator.validate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:54:12)
+    at async model.save (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:2426:7)
+    at async Function.create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:1362:12)
+    at async create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:5:21)
+    at async register (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:63:21)
+    at async userValidate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\middleware\user.middleware.js:10:9)
+    at async cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:16) {
+  errors: [
+    ValidationErrorItem {
+      message: 'user.username cannot be null',
+      type: 'notNull Violation',
+      path: 'username',
+      value: null,
+      origin: 'CORE',
+      instance: [user],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2023-12-11T16:02:24.158] [ERROR] application - { code: 400, message: '用户名已存在', result: '' }
+[2023-12-11T16:02:32.734] [ERROR] application - { code: 400, message: '用户名已存在', result: '' }
+[2023-12-11T16:02:36.742] [ERROR] application - { code: 400, message: '用户名已存在', result: '' }
+[2023-12-11T16:02:42.888] [ERROR] application - { code: 400, message: '用户名已存在', result: '' }
+[2023-12-11T16:03:25.137] [ERROR] application - { code: 400, message: '用户名或密码为空', result: '' }
+[2023-12-11T16:12:12.505] [ERROR] application - { code: 409, message: '用户名已存在', result: '' }

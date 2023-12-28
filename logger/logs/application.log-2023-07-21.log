@@ -1,0 +1,13 @@
+[2023-07-21T18:32:42.750] [ERROR] application - UnauthorizedError: 未授权
+    at Object.throw (E:\demo\vscode\nodePsql\node_modules\koa\lib\context.js:97:11)
+    at E:\demo\vscode\nodePsql\app.js:49:14
+    at dispatch (E:\demo\vscode\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at E:\demo\vscode\nodePsql\app.js:29:11
+    at dispatch (E:\demo\vscode\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at dispatch (E:\demo\vscode\nodePsql\node_modules\koa-router\lib\router.js:399:32)
+    at dispatch (E:\demo\vscode\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at E:\demo\vscode\nodePsql\node_modules\koa-body\lib\index.js:115:16
+    at dispatch (E:\demo\vscode\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at E:\demo\vscode\nodePsql\node_modules\koa-log4\koa-logger.js:86:13 {
+  data: '请登录'
+}

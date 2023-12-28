@@ -1,0 +1,4 @@
+[2023-09-19T12:18:24.087] [INFO] access - 127.0.0.1 - - "POST /user01/login HTTP/1.1" 200 201 "http://localhost:8000/page2" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-09-19T12:18:27.983] [INFO] access - 127.0.0.1 - - "POST /user01/login HTTP/1.1" 200 201 "http://localhost:8000/page2" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-09-19T15:06:22.087] [INFO] access - 127.0.0.1 - - "POST /user01/login HTTP/1.1" 200 201 "http://localhost:8000/page2" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-09-19T15:06:24.744] [INFO] access - 127.0.0.1 - - "GET /user01/info HTTP/1.1" 200 56 "http://localhost:8000/page2" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"

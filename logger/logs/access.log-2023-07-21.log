@@ -1,0 +1,8 @@
+[2023-07-21T18:15:53.445] [INFO] access - ::ffff:127.0.0.1 - - "GET /user01/list HTTP/1.1" 200 184 "" "PostmanRuntime-ApipostRuntime/1.1.0"
+[2023-07-21T18:26:40.712] [INFO] access - ::1 - - "GET / HTTP/1.1" 200 1084 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-07-21T18:26:40.765] [INFO] access - ::1 - - "GET /favicon.ico HTTP/1.1" 200 991 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-07-21T18:27:21.456] [INFO] access - ::1 - - "GET / HTTP/1.1" 200 1084 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-07-21T18:27:21.497] [INFO] access - ::1 - - "GET /favicon.ico HTTP/1.1" 200 991 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-07-21T18:28:31.842] [INFO] access - ::1 - - "GET / HTTP/1.1" 404 - "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-07-21T18:28:31.894] [INFO] access - ::1 - - "GET /favicon.ico HTTP/1.1" 404 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+[2023-07-21T18:28:53.915] [INFO] access - ::1 - - "GET / HTTP/1.1" 404 - "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"

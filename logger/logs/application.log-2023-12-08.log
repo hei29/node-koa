@@ -1,0 +1,552 @@
+[2023-12-08T11:13:01.593] [ERROR] application - ValidationError [SequelizeValidationError]: notNull Violation: user.username cannot be null,
+notNull Violation: user.password cannot be null
+    at InstanceValidator._validate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:50:13)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async InstanceValidator._validateAndRunHooks (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:60:7)
+    at async InstanceValidator.validate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:54:12)
+    at async model.save (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:2426:7)
+    at async Function.create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:1362:12)
+    at async create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:5:21)
+    at async register (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:62:21)
+    at async cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:16)
+    at async session (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-session\index.js:41:7) {
+  errors: [
+    ValidationErrorItem {
+      message: 'user.username cannot be null',
+      type: 'notNull Violation',
+      path: 'username',
+      value: null,
+      origin: 'CORE',
+      instance: [user],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'user.password cannot be null',
+      type: 'notNull Violation',
+      path: 'password',
+      value: null,
+      origin: 'CORE',
+      instance: [user],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2023-12-08T11:14:23.229] [ERROR] application - ValidationError [SequelizeValidationError]: notNull Violation: user.username cannot be null,
+notNull Violation: user.password cannot be null
+    at InstanceValidator._validate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:50:13)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async InstanceValidator._validateAndRunHooks (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:60:7)
+    at async InstanceValidator.validate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:54:12)
+    at async model.save (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:2426:7)
+    at async Function.create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:1362:12)
+    at async create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:5:21)
+    at async register (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:63:21)
+    at async cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:16)
+    at async session (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-session\index.js:41:7) {
+  errors: [
+    ValidationErrorItem {
+      message: 'user.username cannot be null',
+      type: 'notNull Violation',
+      path: 'username',
+      value: null,
+      origin: 'CORE',
+      instance: [user],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'user.password cannot be null',
+      type: 'notNull Violation',
+      path: 'password',
+      value: null,
+      origin: 'CORE',
+      instance: [user],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2023-12-08T11:17:24.421] [ERROR] application - ValidationError [SequelizeValidationError]: notNull Violation: user.username cannot be null,
+notNull Violation: user.password cannot be null
+    at InstanceValidator._validate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:50:13)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async InstanceValidator._validateAndRunHooks (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:60:7)
+    at async InstanceValidator.validate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:54:12)
+    at async model.save (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:2426:7)
+    at async Function.create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:1362:12)
+    at async create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:6:21)
+    at async register (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:63:21)
+    at async cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:16)
+    at async session (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-session\index.js:41:7) {
+  errors: [
+    ValidationErrorItem {
+      message: 'user.username cannot be null',
+      type: 'notNull Violation',
+      path: 'username',
+      value: null,
+      origin: 'CORE',
+      instance: [user],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    },
+    ValidationErrorItem {
+      message: 'user.password cannot be null',
+      type: 'notNull Violation',
+      path: 'password',
+      value: null,
+      origin: 'CORE',
+      instance: [user],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2023-12-08T11:28:55.848] [ERROR] application - ConnectionRefusedError [SequelizeConnectionRefusedError]: connect ECONNREFUSED 127.0.0.1:3336
+    at Client._connectionCallback (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\postgres\connection-manager.js:131:24)
+    at Client._handleErrorWhileConnecting (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg\lib\client.js:327:19)
+    at Client._handleErrorEvent (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg\lib\client.js:337:19)
+    at Connection.emit (events.js:315:20)
+    at Socket.reportStreamError (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg\lib\connection.js:58:12)
+    at Socket.emit (events.js:315:20)
+    at emitErrorNT (internal/streams/destroy.js:92:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:60:3)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  parent: Error: connect ECONNREFUSED 127.0.0.1:3336
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1141:16) {
+    errno: 'ECONNREFUSED',
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 3336
+  },
+  original: Error: connect ECONNREFUSED 127.0.0.1:3336
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1141:16) {
+    errno: 'ECONNREFUSED',
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 3336
+  },
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2023-12-08T11:31:10.333] [ERROR] application - Error
+    at Query.run (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\sequelize.js:315:28
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async PostgresQueryInterface.insert (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:2490:35)
+    at async Function.create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:1362:12)
+    at async create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:6:21)
+    at async register (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:62:21)
+    at async cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:16)
+    at async session (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-session\index.js:41:7) {
+  name: 'SequelizeDatabaseError',
+  parent: error: relation "user" does not exist
+      at Parser.parseErrorMessage (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 103,
+    severity: 'ERROR',
+    code: '42P01',
+    detail: undefined,
+    hint: undefined,
+    position: '13',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_relation.c',
+    line: '1449',
+    routine: 'parserOpenTable',
+    sql: 'INSERT INTO "user" ("id","username","password","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4) RETURNING "id","username","password","age","gender","createdAt","updatedAt";',
+    parameters: [
+      'xytao',
+      4043,
+      '2023-12-08 03:31:10.256 +00:00',
+      '2023-12-08 03:31:10.256 +00:00'
+    ]
+  },
+  original: error: relation "user" does not exist
+      at Parser.parseErrorMessage (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 103,
+    severity: 'ERROR',
+    code: '42P01',
+    detail: undefined,
+    hint: undefined,
+    position: '13',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_relation.c',
+    line: '1449',
+    routine: 'parserOpenTable',
+    sql: 'INSERT INTO "user" ("id","username","password","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4) RETURNING "id","username","password","age","gender","createdAt","updatedAt";',
+    parameters: [
+      'xytao',
+      4043,
+      '2023-12-08 03:31:10.256 +00:00',
+      '2023-12-08 03:31:10.256 +00:00'
+    ]
+  },
+  sql: 'INSERT INTO "user" ("id","username","password","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4) RETURNING "id","username","password","age","gender","createdAt","updatedAt";',
+  parameters: [
+    'xytao',
+    4043,
+    '2023-12-08 03:31:10.256 +00:00',
+    '2023-12-08 03:31:10.256 +00:00'
+  ],
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2023-12-08T11:42:34.338] [ERROR] application - Error
+    at Query.run (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\sequelize.js:315:28
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async PostgresQueryInterface.insert (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:2490:35)
+    at async Function.create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:1362:12)
+    at async create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:6:21)
+    at async register (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:62:21)
+    at async cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:16)
+    at async session (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-session\index.js:41:7) {
+  name: 'SequelizeDatabaseError',
+  parent: error: relation "user" does not exist
+      at Parser.parseErrorMessage (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 103,
+    severity: 'ERROR',
+    code: '42P01',
+    detail: undefined,
+    hint: undefined,
+    position: '13',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_relation.c',
+    line: '1449',
+    routine: 'parserOpenTable',
+    sql: 'INSERT INTO "user" ("id","username","password","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4) RETURNING "id","username","password","age","gender","createdAt","updatedAt";',
+    parameters: [
+      'xytao',
+      4043,
+      '2023-12-08 03:42:34.326 +00:00',
+      '2023-12-08 03:42:34.326 +00:00'
+    ]
+  },
+  original: error: relation "user" does not exist
+      at Parser.parseErrorMessage (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 103,
+    severity: 'ERROR',
+    code: '42P01',
+    detail: undefined,
+    hint: undefined,
+    position: '13',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_relation.c',
+    line: '1449',
+    routine: 'parserOpenTable',
+    sql: 'INSERT INTO "user" ("id","username","password","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4) RETURNING "id","username","password","age","gender","createdAt","updatedAt";',
+    parameters: [
+      'xytao',
+      4043,
+      '2023-12-08 03:42:34.326 +00:00',
+      '2023-12-08 03:42:34.326 +00:00'
+    ]
+  },
+  sql: 'INSERT INTO "user" ("id","username","password","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4) RETURNING "id","username","password","age","gender","createdAt","updatedAt";',
+  parameters: [
+    'xytao',
+    4043,
+    '2023-12-08 03:42:34.326 +00:00',
+    '2023-12-08 03:42:34.326 +00:00'
+  ],
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2023-12-08T11:42:51.012] [ERROR] application - Error
+    at Query.run (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\postgres\query.js:50:25)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\sequelize.js:315:28
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async PostgresQueryInterface.insert (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:2490:35)
+    at async Function.create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:1362:12)
+    at async create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:6:21)
+    at async register (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:62:21)
+    at async cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:16)
+    at async session (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-session\index.js:41:7) {
+  name: 'SequelizeDatabaseError',
+  parent: error: relation "user" does not exist
+      at Parser.parseErrorMessage (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 103,
+    severity: 'ERROR',
+    code: '42P01',
+    detail: undefined,
+    hint: undefined,
+    position: '13',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_relation.c',
+    line: '1449',
+    routine: 'parserOpenTable',
+    sql: 'INSERT INTO "user" ("id","username","password","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4) RETURNING "id","username","password","age","gender","createdAt","updatedAt";',
+    parameters: [
+      'xytao',
+      4043,
+      '2023-12-08 03:42:50.968 +00:00',
+      '2023-12-08 03:42:50.968 +00:00'
+    ]
+  },
+  original: error: relation "user" does not exist
+      at Parser.parseErrorMessage (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:287:98)
+      at Parser.handlePacket (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:126:29)
+      at Parser.parse (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\parser.js:39:38)
+      at Socket.<anonymous> (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\pg-protocol\dist\index.js:11:42)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10)
+      at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+    length: 103,
+    severity: 'ERROR',
+    code: '42P01',
+    detail: undefined,
+    hint: undefined,
+    position: '13',
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'parse_relation.c',
+    line: '1449',
+    routine: 'parserOpenTable',
+    sql: 'INSERT INTO "user" ("id","username","password","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4) RETURNING "id","username","password","age","gender","createdAt","updatedAt";',
+    parameters: [
+      'xytao',
+      4043,
+      '2023-12-08 03:42:50.968 +00:00',
+      '2023-12-08 03:42:50.968 +00:00'
+    ]
+  },
+  sql: 'INSERT INTO "user" ("id","username","password","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4) RETURNING "id","username","password","age","gender","createdAt","updatedAt";',
+  parameters: [
+    'xytao',
+    4043,
+    '2023-12-08 03:42:50.968 +00:00',
+    '2023-12-08 03:42:50.968 +00:00'
+  ],
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2023-12-08T11:43:21.433] [ERROR] application - ReferenceError: res is not defined
+    at create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:11:21)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2023-12-08T11:46:36.528] [ERROR] application - ReferenceError: res is not defined
+    at create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:11:33)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async register (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:62:21)
+    at async cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:16)
+    at async session (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-session\index.js:41:7)
+    at async C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-log4\koa-logger.js:86:7
+    at async serve (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-static\index.js:53:9) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2023-12-08T11:47:12.522] [ERROR] application - ReferenceError: res is not defined
+    at create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:11:33)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async register (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:62:21)
+    at async cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:16)
+    at async session (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-session\index.js:41:7)
+    at async C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-log4\koa-logger.js:86:7
+    at async serve (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-static\index.js:53:9) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2023-12-08T11:48:02.040] [ERROR] application - ReferenceError: res is not defined
+    at create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:11:33)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async register (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:62:21)
+    at async cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:16)
+    at async session (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-session\index.js:41:7)
+    at async C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-log4\koa-logger.js:86:7
+    at async serve (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-static\index.js:53:9) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2023-12-08T11:50:37.487] [ERROR] application - ReferenceError: res is not defined
+    at create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:10:32)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async register (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:62:21)
+    at async cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:16)
+    at async session (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-session\index.js:41:7)
+    at async C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-log4\koa-logger.js:86:7
+    at async serve (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-static\index.js:53:9) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2023-12-08T11:51:20.822] [ERROR] application - ReferenceError: res is not defined
+    at create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:10:32)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async register (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:62:21)
+    at async cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:16)
+    at async session (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-session\index.js:41:7)
+    at async C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-log4\koa-logger.js:86:7
+    at async serve (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-static\index.js:53:9) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2023-12-08T16:46:01.838] [ERROR] application - ValidationError [SequelizeValidationError]: notNull Violation: user.username cannot be null
+    at InstanceValidator._validate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:50:13)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async InstanceValidator._validateAndRunHooks (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:60:7)
+    at async InstanceValidator.validate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\instance-validator.js:54:12)
+    at async model.save (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:2426:7)
+    at async Function.create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:1362:12)
+    at async create (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:5:21)
+    at async register (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:62:21)
+    at async cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:16)
+    at async session (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-session\index.js:41:7) {
+  errors: [
+    ValidationErrorItem {
+      message: 'user.username cannot be null',
+      type: 'notNull Violation',
+      path: 'username',
+      value: null,
+      origin: 'CORE',
+      instance: [user],
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}

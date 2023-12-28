@@ -1,0 +1,17 @@
+[2023-09-19T15:03:41.050] [ERROR] application - UnauthorizedError: Bad Authorization header format. Format is "Authorization: Bearer <token>"
+    at Object.throw (E:\demo\vscode\nodePsql\node_modules\koa\lib\context.js:97:11)
+    at resolveAuthorizationHeader (E:\demo\vscode\nodePsql\node_modules\koa-jwt\lib\resolvers\auth-header.js:26:18)
+    at E:\demo\vscode\nodePsql\node_modules\koa-jwt\lib\index.js:20:49
+    at Array.find (<anonymous>)
+    at jwt (E:\demo\vscode\nodePsql\node_modules\koa-jwt\lib\index.js:20:24)
+    at E:\demo\vscode\nodePsql\node_modules\koa-unless\index.js:29:12
+    at dispatch (E:\demo\vscode\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at E:\demo\vscode\nodePsql\node_modules\@koa\router\lib\router.js:425:16
+    at dispatch (E:\demo\vscode\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at E:\demo\vscode\nodePsql\node_modules\koa-compose\index.js:34:12 {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
