@@ -1,8 +1,8 @@
 const db = require('../db/seq.js');
 const jwt = require('jsonwebtoken');
 const { JWTSECRETKEY } = require('../config/config.default.js');
-
-const { create, getUserInfo } = require('../server/user.server.js');
+const { create, getUserInfo, update } = require('../server/user.server.js');
+const { userRegisterError } = require('../constant/err.type.js');
 
 class Controller {
     async list(ctx, next) {
@@ -74,6 +74,16 @@ class Controller {
         }
         await next()
     }
+    
+    async changePassword(ctx, next) {
+        const { username } = ctx.request.auth;
+        const res = await update(username, ctx.request.body);
+        ctx.body = {
+            status: 200,
+            message: '修改成功',
+            data: res
+        }
+    }
 
     async info(ctx, next) {
         // token解析数据默认放在ctx.state.user
@@ -100,6 +110,7 @@ class Controller {
         });
         next();
     }
+
 }
 
 module.exports = new Controller();

@@ -16,6 +16,13 @@ class UserServer{
         })
         return res ? res.dataValues : null
     }
+
+    async update(username, needUpdate = {}) {
+        const res = await User.update({ ...needUpdate }, {
+            where: { username }
+        })
+        return res
+    }
 }
 
 module.exports = new UserServer();

@@ -1,15 +1,16 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { JWTSECRETKEY } = require('../config/config.default.js');
-const { isNotToken, tokenExpiredError, jsonWebTokenError, tokenError } = require('../constant/err.type.js');
-
 const { 
     userFormatEmpty, 
-    userRepitition, 
-    userRegisterError,
+    userRepitition,
     userNotFound,
     userLoginError,
-    invalidPassword
+    invalidPassword,
+    isNotToken,
+    tokenExpiredError,
+    jsonWebTokenError,
+    tokenError
  } = require('../constant/err.type.js');
 const { getUserInfo } = require('../server/user.server.js');
 
