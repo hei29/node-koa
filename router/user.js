@@ -3,7 +3,6 @@ const router = require('@koa/router')()
 // const jwtParser = require('koa-jwt');
 // const router = new Router()
 const { JWTSECRETKEY:secret } = require('../config/config.default')
-const { login:checkLogin } = require('../middleware/index.js') 
 
 const { 
     list, 
@@ -11,8 +10,7 @@ const {
     register, 
     queryUserInfo, 
     changePassword, 
-    info, 
-    add 
+    info
 } = require('../controller/user.controller.js')
 const { 
     userValidate, 
@@ -38,8 +36,6 @@ router.get('/list', list)
 router.post('/login', userValidate, verifyLogin, login)
 router.post('/register', userValidate, userController, bcryptPassword, register)
 router.get('/queryUserInfo', queryUserInfo)
-router.patch('/changePassword', jwtParserAuth, changePassword)
-router.get('/info', checkLogin, info)
-router.post('/add', add)
+router.patch('/changePassword', jwtParserAuth, bcryptPassword, changePassword)
 
 module.exports = router

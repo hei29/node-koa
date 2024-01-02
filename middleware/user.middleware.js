@@ -11,7 +11,7 @@ const {
     tokenExpiredError,
     jsonWebTokenError,
     tokenError
- } = require('../constant/err.type.js');
+} = require('../constant/err.type.js');
 const { getUserInfo } = require('../server/user.server.js');
 
 class UserMiddleware {

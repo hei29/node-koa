@@ -19,11 +19,11 @@ class Controller {
     }
 
     async login(ctx, next) {
-        const body = ctx.request.body;
-        console.log(process.env.JWTSECRETKEY, 23);
+        const { username } = ctx.request.body;
+        const res = await getUserInfo({ username });
         // token
         const token = jwt.sign({
-            data: body.username,
+            data: res,
             // exp: Math.floor(Date.now() / 1000) + (60 * 60), // 1 hour
         }, JWTSECRETKEY, {expiresIn: '1d'}) // 也可以写作expiresIm: 60 * 60 * 24
         // session
@@ -77,7 +77,8 @@ class Controller {
     
     async changePassword(ctx, next) {
         const { username } = ctx.request.auth;
-        const res = await update(username, ctx.request.body);
+        const { password } = ctx.request.body;
+        const res = await update(username, { password });
         ctx.body = {
             status: 200,
             message: '修改成功',
@@ -85,30 +86,8 @@ class Controller {
         }
     }
 
-    async info(ctx, next) {
-        // token解析数据默认放在ctx.state.user
-        const {data} = ctx.state.user;
-        ctx.body = {
-            status: 200,
-            message: '获取成功',
-            data
-        }
-        await next()
-    }
-
-    async add(ctx, next) {
-        const body = ctx.request.body;
-        const str = 'insert into userinfo (username, password) values (?, ?)';
-        await db.query(str, [body.username, body.password]).then(res => {
-            ctx.body = {
-                status: 200,
-                message: '添加成功',
-                data: res
-            }
-        }).catch(err => {
-            return console.error('添加出错', err);
-        });
-        next();
+    async deleteUser(ctx, next) {
+        const { id } = ctx.request.auth;
     }
 
 }

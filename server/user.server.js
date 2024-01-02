@@ -23,6 +23,13 @@ class UserServer{
         })
         return res
     }
+
+    async delete(id) {
+        const res = await User.destroy({
+            where: { id }
+        })
+        return res
+    }
 }
 
 module.exports = new UserServer();
