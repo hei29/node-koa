@@ -1,21 +1,17 @@
 const db = require('../db/seq.js');
 const jwt = require('jsonwebtoken');
 const { JWTSECRETKEY } = require('../config/config.default.js');
-const { create, getUserInfo, update } = require('../server/user.server.js');
+const { create, selectAll, getUserInfo, update, dele } = require('../server/user.server.js');
 const { userRegisterError } = require('../constant/err.type.js');
 
 class Controller {
     async list(ctx, next) {
-        const str = 'select * from userinfo';
-        await db.query(str, []).then(res => {
-            ctx.body = {
-                status: 200,
-                message: 'ok',
-                data: res[0]
-            };
-        }).catch(err => {
-            return console.error('查询出错', err);
-        });
+        const res = await selectAll();
+        ctx.body = {
+            status: 200,
+            message: '获取成功',
+            data: res
+        }
     }
 
     async login(ctx, next) {
@@ -87,7 +83,19 @@ class Controller {
     }
 
     async deleteUser(ctx, next) {
-        const { id } = ctx.request.auth;
+        const { id } = ctx.request.body;
+        const res = await dele(id);
+        if (res) {
+            ctx.body = {
+                status: 200,
+                message: '删除成功'
+            }
+        } else {
+            ctx.body = {
+                status: 400,
+                message: '删除失败'
+            }
+        }
     }
 
 }

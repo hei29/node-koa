@@ -6,6 +6,11 @@ class UserServer{
         return res;
     }
 
+    async selectAll() {
+        const res = await User.findAll();
+        return res;
+    }
+
     async getUserInfo({ id, username }) {
         const whereOpt = {}
         id && Object.assign(whereOpt, { id })
@@ -14,7 +19,8 @@ class UserServer{
             // attributes: ['id', 'username'], // 查询字段
             where: whereOpt
         })
-        return res ? res.dataValues : null
+        // return res ? res.dataValues : null // 就算不处理，返回的也是dataValues
+        return res
     }
 
     async update(username, needUpdate = {}) {
@@ -24,7 +30,7 @@ class UserServer{
         return res
     }
 
-    async delete(id) {
+    async dele(id) {
         const res = await User.destroy({
             where: { id }
         })

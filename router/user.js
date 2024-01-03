@@ -10,7 +10,7 @@ const {
     register, 
     queryUserInfo, 
     changePassword, 
-    info
+    deleteUser
 } = require('../controller/user.controller.js')
 const { 
     userValidate, 
@@ -37,5 +37,6 @@ router.post('/login', userValidate, verifyLogin, login)
 router.post('/register', userValidate, userController, bcryptPassword, register)
 router.get('/queryUserInfo', queryUserInfo)
 router.patch('/changePassword', jwtParserAuth, bcryptPassword, changePassword)
+router.post('/delete', deleteUser)
 
 module.exports = router
