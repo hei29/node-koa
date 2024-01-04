@@ -16,12 +16,9 @@ class Controller {
 
     async login(ctx, next) {
         const { username } = ctx.request.body;
-        const res = await getUserInfo({ username });
+        const { password, ...res } = await getUserInfo({ username });
         // token
-        const token = jwt.sign({
-            data: res,
-            // exp: Math.floor(Date.now() / 1000) + (60 * 60), // 1 hour
-        }, JWTSECRETKEY, {expiresIn: '1d'}) // 也可以写作expiresIm: 60 * 60 * 24
+        const token = jwt.sign(res, JWTSECRETKEY, {expiresIn: '1d'}) // 也可以写作expiresIm: 60 * 60 * 24
         // session
         // ctx.session.userinfo = body.user;
         // cookie

@@ -8,7 +8,6 @@ const session = require('koa-session');
 const {accessLogger, logger} = require('../logger/index.js');
 
 const routerUser = require('../router/user.js');
-const routerHero = require('../router/hero.js');
 
 const app = new koa();
 
@@ -53,8 +52,7 @@ app.use(cors({
 
 // routes() 的作用是启动路由
 // allowedMethods() 的作用是允许任何请求(get,post,put)
-app.use(routerUser.routes(), routerUser.allowedMethods());
-app.use(routerHero.routes(), routerHero.allowedMethods());
+app.use(routerUser.routes()).use(routerUser.allowedMethods());
 
 app.use(async (ctx, next) => {  
     if(ctx.url === '/favicon.ico') return;

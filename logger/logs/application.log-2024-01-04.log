@@ -1,0 +1,137 @@
+[2024-01-04T15:47:31.187] [ERROR] application - TypeError: Cannot destructure property 'password' of 'ctx.request.password' as it is undefined.
+    at changePassword (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:76:17)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at bcryptPassword (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\middleware\user.middleware.js:46:15)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at jwtParserAuth (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\middleware\user.middleware.js:93:15)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:425:16
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:430:31) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-04T15:49:24.136] [ERROR] application - TypeError: Cannot destructure property 'password' of 'ctx.request.password' as it is undefined.
+    at changePassword (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\controller\user.controller.js:76:17)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at bcryptPassword (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\middleware\user.middleware.js:47:15)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at jwtParserAuth (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\middleware\user.middleware.js:94:15)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:425:16
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:430:31) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-04T15:51:21.120] [ERROR] application - Error: WHERE parameter "username" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1743:13)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1734:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1732:35)
+    at PostgresQueryGenerator.whereQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1714:24)
+    at PostgresQueryGenerator.updateQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:371:116)
+    at PostgresQueryInterface.bulkUpdate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-interface.js:361:37)
+    at Function.update (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:2010:54)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async update (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:27:21) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-04T15:51:35.591] [ERROR] application - Error: WHERE parameter "username" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1743:13)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1734:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1732:35)
+    at PostgresQueryGenerator.whereQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1714:24)
+    at PostgresQueryGenerator.updateQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:371:116)
+    at PostgresQueryInterface.bulkUpdate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-interface.js:361:37)
+    at Function.update (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:2010:54)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async update (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:27:21) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-04T15:54:07.773] [ERROR] application - Error: WHERE parameter "username" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1743:13)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1734:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1732:35)
+    at PostgresQueryGenerator.whereQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1714:24)
+    at PostgresQueryGenerator.updateQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:371:116)
+    at PostgresQueryInterface.bulkUpdate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-interface.js:361:37)
+    at Function.update (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:2010:54)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async update (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:27:21) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-04T16:03:58.626] [ERROR] application - Error: WHERE parameter "username" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1743:13)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1734:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1732:35)
+    at PostgresQueryGenerator.whereQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1714:24)
+    at PostgresQueryGenerator.updateQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:371:116)
+    at PostgresQueryInterface.bulkUpdate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-interface.js:361:37)
+    at Function.update (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:2010:54)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async update (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:27:21) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-04T16:04:31.063] [ERROR] application - Error: WHERE parameter "username" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1743:13)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1734:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1732:35)
+    at PostgresQueryGenerator.whereQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1714:24)
+    at PostgresQueryGenerator.updateQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:371:116)
+    at PostgresQueryInterface.bulkUpdate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-interface.js:361:37)
+    at Function.update (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:2010:54)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async update (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:27:21) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-04T16:04:37.225] [ERROR] application - Error: WHERE parameter "username" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1743:13)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1734:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1732:35)
+    at PostgresQueryGenerator.whereQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:1714:24)
+    at PostgresQueryGenerator.updateQuery (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-generator.js:371:116)
+    at PostgresQueryInterface.bulkUpdate (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\dialects\abstract\query-interface.js:361:37)
+    at Function.update (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\sequelize\lib\model.js:2010:54)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async update (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\server\user.server.js:27:21) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-04T16:07:58.486] [ERROR] application - { code: 401, message: '密码错误', result: '' }

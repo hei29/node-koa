@@ -19,8 +19,7 @@ class UserServer{
             // attributes: ['id', 'username'], // 查询字段
             where: whereOpt
         })
-        // return res ? res.dataValues : null // 就算不处理，返回的也是dataValues
-        return res
+        return res ? res.dataValues : null
     }
 
     async update(username, needUpdate = {}) {
