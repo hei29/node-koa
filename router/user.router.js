@@ -1,4 +1,6 @@
-const router = require('@koa/router')()
+const Router = require('@koa/router')
+const router = new Router({prefix: '/userinfo'})
+// router.prefix('/userinfo')
 
 // const jwtParser = require('koa-jwt');
 // const router = new Router()
@@ -19,8 +21,6 @@ const {
     verifyLogin,
     jwtParserAuth
 } = require('../middleware/user.middleware.js');
-
-router.prefix('/userinfo')
 
 // 永久重定向301，临时重定向302
 router.get('/', ctx => {
