@@ -7,7 +7,7 @@ const cors = require('@koa/cors');
 const session = require('koa-session');
 const {accessLogger, logger} = require('../logger/index.js');
 
-const routerUser = require('../router/user.js');
+const router = require('../router');
 
 const app = new koa();
 
@@ -49,10 +49,11 @@ app.use(cors({
     credentials: true, // 是否允许发送Cookie
 }));
 
-
-// routes() 的作用是启动路由
-// allowedMethods() 的作用是允许任何请求(get,post,put)
-app.use(routerUser.routes()).use(routerUser.allowedMethods());
+// 配置路由中间件
+// allowedMethods() , 当ctx.status === 404或为空时，丰富response对象的header头
+// 先判断是否存在对应的请求路由，如果存在，获取对应路由已存在的methods，返回405，设置响应头Allow: methods
+// 如果请求的方法不是['get', 'post', 'put', 'head', 'delete', 'options', 'patch']中的一种，返回501
+app.use(router.routes()).use(router.allowedMethods());
 
 app.use(async (ctx, next) => {  
     if(ctx.url === '/favicon.ico') return;
@@ -65,7 +66,6 @@ app.on('error', (err, ctx) => {
     logger.error(err);
     ctx.status = err.code || err.status || 500;
     ctx.body = err
-    return
 });
 
 module.exports = app;

@@ -10,7 +10,8 @@ const {
     isNotToken,
     tokenExpiredError,
     jsonWebTokenError,
-    tokenError
+    tokenError,
+    isNotAdmin
 } = require('../constant/err.type.js');
 const { getUserInfo } = require('../server/user.server.js');
 
@@ -79,6 +80,7 @@ class UserMiddleware {
             const data = jwt.verify(token, JWTSECRETKEY);
             ctx.request.auth = data;
         } catch (error) {
+            console.log(error.name);
             switch(error.name) {
                 case 'TokenExpiredError':
                     ctx.app.emit('error', tokenExpiredError, ctx);
@@ -89,7 +91,14 @@ class UserMiddleware {
                 default:
                     ctx.app.emit('error', tokenError, ctx);
             }
+            return;
         }
+        await next();
+    }
+
+    async isAdmin(ctx, next) {
+        const { isAdmin } = ctx.request.auth;
+        if(!isAdmin) return ctx.app.emit('error', isNotAdmin, ctx)
         await next();
     }
 }

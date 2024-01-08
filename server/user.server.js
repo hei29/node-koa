@@ -1,8 +1,8 @@
 const User = require('../model/user.model.js');
 
 class UserServer{
-    async create(username, password) {
-        const res = await User.create({username, password});
+    async create(params) {
+        const res = await User.create(params);
         return res;
     }
 

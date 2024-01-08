@@ -15,6 +15,11 @@ const User = sequelize.define('user', {
         type: DataTypes.INTEGER,
         allowNull: true,
     },
+    isAdmin: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
+    },
     gender: {
         type: DataTypes.BOOLEAN,
         allowNull: true,
@@ -28,3 +33,4 @@ const User = sequelize.define('user', {
 module.exports = User;
 // 创建表，如果表已经存在，则将其首先删除
 // User.sync({ force: true })
+// User.sync({ alter: true }) // 如果表不存在，则创建该表（如果已经存在，则更新表已使其与模型匹配）

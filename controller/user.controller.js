@@ -38,9 +38,9 @@ class Controller {
     }
 
     async register(ctx, next) {
-        const { username, password } = ctx.request.body;
+        // const { username, password } = ctx.request.body;
         try {
-            const res = await create(username, password);
+            const res = await create(ctx.request.body);
             ctx.body = {
                 code: 200,
                 message: '注册成功',
@@ -66,6 +66,17 @@ class Controller {
             data: res
         }
         await next()
+    }
+
+    async modifyUser(ctx, next) {
+        const { username } = ctx.request.auth;
+        const { password, ...params } = ctx.request.body;
+        const res = await updata(username, params);
+        ctx.body = {
+            status: 200,
+            message: '修改成功',
+            data: res
+        }
     }
     
     async changePassword(ctx, next) {

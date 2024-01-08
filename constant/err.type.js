@@ -48,5 +48,10 @@ module.exports = {
         code: 401,
         message: 'token错误',
         result: ''
+    },
+    isNotAdmin: {
+        code: 403,
+        message: '没有管理员权限',
+        result: ''
     }
 }
