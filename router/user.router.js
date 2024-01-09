@@ -10,8 +10,9 @@ const {
     list, 
     login, 
     register, 
-    queryUserInfo, 
+    modifyUser,
     changePassword, 
+    resetPassword,
     deleteUser
 } = require('../controller/user.controller.js')
 const { 
@@ -19,7 +20,8 @@ const {
     userController, 
     bcryptPassword,
     verifyLogin,
-    jwtParserAuth
+    jwtParserAuth,
+    isAdmin
 } = require('../middleware/user.middleware.js');
 
 // 永久重定向301，临时重定向302
@@ -32,11 +34,12 @@ router.get('/', ctx => {
 // 解析后的数据将会存在ctx.state.auth中，默认是存在ctx.state.user中
 // router.use(jwtParser({secret, key: 'auth'}).unless({path: [/^\/userinfo\/login/, /^\/userinfo\/register/]}))
 
-router.get('/list', list)
+router.get('/list', jwtParserAuth, list)
 router.post('/login', userValidate, verifyLogin, login)
 router.post('/register', userValidate, userController, bcryptPassword, register)
-router.get('/queryUserInfo', queryUserInfo)
+router.post('/modifyUser', jwtParserAuth, modifyUser)
 router.patch('/changePassword', jwtParserAuth, bcryptPassword, changePassword)
-router.post('/delete', deleteUser)
+router.get('/resetPassword', jwtParserAuth, isAdmin, resetPassword)
+router.post('/delete', jwtParserAuth, isAdmin, deleteUser)
 
 module.exports = router

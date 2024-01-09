@@ -1,6 +1,8 @@
 const koa = require('koa');
+const path = require('path');
 // 引入解析post的模块
 const { koaBody } = require('koa-body');
+const koaStatic = require('koa-static');
 const onerror = require('koa-onerror');
 const static = require('koa-static');
 const cors = require('@koa/cors');
@@ -28,11 +30,15 @@ const SESSION_CONFIG = {
 app.use(session(SESSION_CONFIG, app));
 // 配置post请求的中间件
 app.use(koaBody({
-    multipart: true,
+    multipart: true, // 支持文件上传
     formidable: {
-        maxFileSize: 200 * 1024 * 1024    // 设置上传文件大小最大限制，默认2M
+        maxFileSize: 200 * 1024 * 1024,    // 设置上传文件大小最大限制，默认2M
+        // 尽量不要使用相对路径，这里的相对路径是相对于process.cwd()的，即项目根目录
+        uploadDir: path.join(__dirname, '../public/uploads'), // 设置文件上传目录
+        keepExtensions: true, // 保持文件的后缀
     }
 }));
+app.use(koaStatic(path.join(__dirname, '../public/uploads')));
 
 app.use(async (ctx, next) => {
     if(typeof ctx.request.body === 'string') {

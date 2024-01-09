@@ -1,8 +1,21 @@
 class Controller {
     async uploads(ctx, next) {
-        ctx.body = {
-            status: 200,
-            message: '上传成功'
+        const file = ctx.request.files.file;
+        if(file) {
+            // const { path: filePath, name: fileName } = file;
+            // ctx.body = {
+            //     status: 200,
+            //     message: '上传成功',
+            //     data: {
+            //         filePath,
+            //         fileName
+            //     }
+            // }
+            ctx.body = {
+                status: 200,
+                message: '上传成功',
+                data: file
+            }
         }
     }
 }

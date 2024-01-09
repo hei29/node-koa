@@ -53,6 +53,7 @@ class UserMiddleware {
         try {
             // 1.判断用户名是否存在
             const res = await getUserInfo({ username });
+            ctx.request.body = res;
             if (!res) {
                 ctx.app.emit('error', userNotFound, ctx);
                 return
@@ -80,7 +81,6 @@ class UserMiddleware {
             const data = jwt.verify(token, JWTSECRETKEY);
             ctx.request.auth = data;
         } catch (error) {
-            console.log(error.name);
             switch(error.name) {
                 case 'TokenExpiredError':
                     ctx.app.emit('error', tokenExpiredError, ctx);

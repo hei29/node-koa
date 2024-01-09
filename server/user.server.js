@@ -6,8 +6,14 @@ class UserServer{
         return res;
     }
 
-    async selectAll() {
-        const res = await User.findAll();
+    async selectAll({id, username, isAdmin}) {
+        const whereOpt = {}
+        id && Object.assign(whereOpt, { id })
+        username && Object.assign(whereOpt, { username })
+        isAdmin && Object.assign(whereOpt, { isAdmin })
+        const res = await User.findAll({
+            where: whereOpt
+        });
         return res;
     }
 

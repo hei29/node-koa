@@ -1,12 +1,16 @@
 const db = require('../db/seq.js');
 const jwt = require('jsonwebtoken');
 const { JWTSECRETKEY } = require('../config/config.default.js');
+const bcrypt = require('bcryptjs');
 const { create, selectAll, getUserInfo, update, dele } = require('../server/user.server.js');
-const { userRegisterError } = require('../constant/err.type.js');
+const {
+    apiServerErr
+} = require('../constant/err.type.js');
 
 class Controller {
     async list(ctx, next) {
-        const res = await selectAll();
+        const params = ctx.request.query;
+        const res = await selectAll(params);
         ctx.body = {
             status: 200,
             message: '获取成功',
@@ -15,8 +19,7 @@ class Controller {
     }
 
     async login(ctx, next) {
-        const { username } = ctx.request.body;
-        const { password, ...res } = await getUserInfo({ username });
+        const { password, ...res } = ctx.request.body;
         // token
         const token = jwt.sign(res, JWTSECRETKEY, {expiresIn: '1d'}) // 也可以写作expiresIm: 60 * 60 * 24
         // session
@@ -30,15 +33,13 @@ class Controller {
         })
 
         ctx.body = {
-            status: 200,
+            code: 200,
             message: '登录成功',
             token
         }
-        await next()
     }
 
     async register(ctx, next) {
-        // const { username, password } = ctx.request.body;
         try {
             const res = await create(ctx.request.body);
             ctx.body = {
@@ -50,59 +51,84 @@ class Controller {
                 }
             }
         } catch (error) {
-            ctx.app.emit('error', userRegisterError, ctx);
-            return
+            ctx.app.emit('error', apiServerErr, ctx);
         }
-        
-        await next()
-    }
-
-    async queryUserInfo(ctx, next) {
-        const { username } = ctx.request.query;
-        const res = await getUserInfo({ username });
-        ctx.body = {
-            status: 200,
-            message: '获取成功',
-            data: res
-        }
-        await next()
     }
 
     async modifyUser(ctx, next) {
-        const { username } = ctx.request.auth;
-        const { password, ...params } = ctx.request.body;
-        const res = await updata(username, params);
-        ctx.body = {
-            status: 200,
-            message: '修改成功',
-            data: res
+        try {
+            const { username } = ctx.request.auth;
+            const { password, ...params } = ctx.request.body;
+            console.log(username, params);
+            const res = await update(username, params);
+            if (res) {
+                ctx.body = {
+                    status: 200,
+                    message: '修改成功',
+                    data: res
+                }
+            }
+        } catch (error) {
+            ctx.app.emit('error', apiServerErr, ctx);
         }
     }
     
     async changePassword(ctx, next) {
-        const { username } = ctx.request.auth;
-        const { password } = ctx.request.body;
-        const res = await update(username, { password });
-        ctx.body = {
-            status: 200,
-            message: '修改成功',
-            data: res
+        try {
+            const { username } = ctx.request.auth;
+            const { password } = ctx.request.body;
+            const res = await update(username, { password });
+            if(res) {
+                ctx.body = {
+                    status: 200,
+                    message: '修改成功',
+                    data: res
+                }
+                // 修改完密码后删除cookie
+                ctx.cookies.set('set_token', '', {
+                    maxAge: 0
+                })
+            }
+        } catch (error) {
+            ctx.app.emit('error', apiServerErr, ctx);
+        }
+    }
+
+    // 重置密码
+    async resetPassword(ctx, next) {
+        try {
+            const { id } = ctx.request.query;
+            // 加盐
+            const salt = bcrypt.genSaltSync(10);
+            const hash = bcrypt.hashSync('123456', salt);
+            const res = await update(id, { password: hash });
+            if (res) {
+                ctx.body = {
+                    status: 200,
+                    message: '重置成功'
+                }
+                ctx.cookies.set('set_token', '', {
+                    maxAge: 0
+                })
+            }
+        } catch (error) {
+            console.log(error);
+            ctx.app.emit('error', apiServerErr, ctx);
         }
     }
 
     async deleteUser(ctx, next) {
-        const { id } = ctx.request.body;
-        const res = await dele(id);
-        if (res) {
-            ctx.body = {
-                status: 200,
-                message: '删除成功'
+        try {
+            const { id } = ctx.request.body;
+            const res = await dele(id);
+            if (res) {
+                ctx.body = {
+                    status: 200,
+                    message: '删除成功'
+                }
             }
-        } else {
-            ctx.body = {
-                status: 400,
-                message: '删除失败'
-            }
+        } catch (error) {
+            ctx.app.emit('error', apiServerErr, ctx);
         }
     }
 
