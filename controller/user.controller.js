@@ -2,7 +2,7 @@ const db = require('../db/seq.js');
 const jwt = require('jsonwebtoken');
 const { JWTSECRETKEY } = require('../config/config.default.js');
 const bcrypt = require('bcryptjs');
-const { create, selectAll, getUserInfo, update, dele } = require('../server/user.server.js');
+const { create, selectAll, update, dele } = require('../server/user.server.js');
 const {
     apiServerErr
 } = require('../constant/err.type.js');
@@ -59,8 +59,7 @@ class Controller {
         try {
             const { username } = ctx.request.auth;
             const { password, ...params } = ctx.request.body;
-            console.log(username, params);
-            const res = await update(username, params);
+            const res = await update({ username }, params);
             if (res) {
                 ctx.body = {
                     status: 200,
@@ -77,7 +76,7 @@ class Controller {
         try {
             const { username } = ctx.request.auth;
             const { password } = ctx.request.body;
-            const res = await update(username, { password });
+            const res = await update({ username }, { password });
             if(res) {
                 ctx.body = {
                     status: 200,
@@ -101,18 +100,18 @@ class Controller {
             // 加盐
             const salt = bcrypt.genSaltSync(10);
             const hash = bcrypt.hashSync('123456', salt);
-            const res = await update(id, { password: hash });
+            const res = await update({ id }, { password: hash });
             if (res) {
                 ctx.body = {
                     status: 200,
-                    message: '重置成功'
+                    message: '重置成功',
+                    result: res
                 }
                 ctx.cookies.set('set_token', '', {
                     maxAge: 0
                 })
             }
         } catch (error) {
-            console.log(error);
             ctx.app.emit('error', apiServerErr, ctx);
         }
     }

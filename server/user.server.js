@@ -28,9 +28,12 @@ class UserServer{
         return res ? res.dataValues : null
     }
 
-    async update(username, needUpdate = {}) {
+    async update({ username, id }, needUpdate = {}) {
+        const whereObj = {}
+        username && Object.assign(whereObj, { username })
+        id && Object.assign(whereObj, { id })
         const res = await User.update({ ...needUpdate }, {
-            where: { username }
+            where: whereObj
         })
         return res
     }

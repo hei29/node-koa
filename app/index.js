@@ -1,5 +1,6 @@
 const koa = require('koa');
 const path = require('path');
+const fs = require('fs');
 // 引入解析post的模块
 const { koaBody } = require('koa-body');
 const koaStatic = require('koa-static');
@@ -73,5 +74,14 @@ app.on('error', (err, ctx) => {
     ctx.status = err.code || err.status || 500;
     ctx.body = err
 });
+
+// 错误监听，文件上传报错
+app.on('uploadsErr', (err, ctx) => {
+    if(ctx.request.files.file) {
+        // const { path: filePath, name: fileName } = ctx.request.files.file;
+        // 删除上传文件
+        fs.unlinkSync(ctx.request.files.file.path);
+    }
+})
 
 module.exports = app;

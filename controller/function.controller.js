@@ -1,6 +1,7 @@
 class Controller {
     async uploads(ctx, next) {
         const file = ctx.request.files.file;
+        console.log(file);
         if(file) {
             // const { path: filePath, name: fileName } = file;
             // ctx.body = {
