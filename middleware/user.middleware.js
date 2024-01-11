@@ -81,7 +81,6 @@ class UserMiddleware {
             const data = jwt.verify(token, JWTSECRETKEY);
             ctx.request.auth = data;
         } catch (error) {
-            ctx.app.emit('uploadsErr', '', ctx)
             switch(error.name) {
                 case 'TokenExpiredError':
                     ctx.app.emit('error', tokenExpiredError, ctx);
@@ -99,7 +98,6 @@ class UserMiddleware {
 
     async isAdmin(ctx, next) {
         const { isAdmin } = ctx.request.auth;
-        console.log(111111);
         if(!isAdmin) return ctx.app.emit('error', isNotAdmin, ctx)
         await next();
     }

@@ -68,20 +68,30 @@ app.use(async (ctx, next) => {
 });
 
 // 错误监听，后台报错
+// 任何一个中间件发生错误，都会触发error事件，进入错误监听
+// 也可以通过ctx.app.emit('error', err, ctx)手动触发error事件传递上下文和错误信息
 app.on('error', (err, ctx) => {
+    console.log('进入错误监听111');
     // 利用logger.error打印错误日志
     logger.error(err);
+    // 返回错误结果
     ctx.status = err.code || err.status || 500;
     ctx.body = err
-});
-
-// 错误监听，文件上传报错
-app.on('uploadsErr', (err, ctx) => {
-    if(ctx.request.files.file) {
-        // const { path: filePath, name: fileName } = ctx.request.files.file;
+    // 判断是否有上传文件，如果有，删除上传的文件
+    const file = ctx.request.files ? ctx.request.files.file : null;
+    console.log(file instanceof Object, file instanceof Array);
+    if(file) {
+        fs.appendFileSync(path.join(__dirname, './file1.json'), JSON.stringify(file), (err) => {
+            if(!err) console.log('写入成功');
+        });
         // 删除上传文件
-        fs.unlinkSync(ctx.request.files.file.path);
+        fs.unlinkSync(file.filepath);
+        ctx.body = {
+            code: 500,
+            msg: '服务器错误',
+            err: file
+        }
     }
-})
+});
 
 module.exports = app;

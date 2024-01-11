@@ -1,0 +1,184 @@
+[2024-01-11T11:33:57.660] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T11:45:40.428] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T11:46:45.989] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T11:47:24.636] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T11:59:12.417] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T11:59:12.420] [ERROR] application - TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+    at Object.unlinkSync (fs.js:1126:10)
+    at Application.<anonymous> (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\app\index.js:83:12)
+    at Application.emit (events.js:315:20)
+    at jwtParserAuth (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\middleware\user.middleware.js:79:35)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:425:16
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:430:31)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32) {
+  code: 'ERR_INVALID_ARG_TYPE',
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-11T12:00:17.850] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:00:17.865] [ERROR] application - TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+    at Object.unlinkSync (fs.js:1126:10)
+    at Application.<anonymous> (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\app\index.js:83:12)
+    at Application.emit (events.js:315:20)
+    at jwtParserAuth (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\middleware\user.middleware.js:79:35)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:425:16
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:430:31)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32) {
+  code: 'ERR_INVALID_ARG_TYPE',
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-11T12:01:26.267] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:01:26.270] [ERROR] application - TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+    at Object.unlinkSync (fs.js:1126:10)
+    at Application.<anonymous> (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\app\index.js:83:12)
+    at Application.emit (events.js:315:20)
+    at jwtParserAuth (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\middleware\user.middleware.js:79:35)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:425:16
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:430:31)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32) {
+  code: 'ERR_INVALID_ARG_TYPE',
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-11T12:02:02.520] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:03:47.904] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:03:47.906] [ERROR] application - TypeError: Cannot read property 'file' of undefined
+    at Application.<anonymous> (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\app\index.js:78:36)
+    at Application.emit (events.js:315:20)
+    at jwtParserAuth (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\middleware\user.middleware.js:79:35)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:425:16
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:430:31)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:22) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-11T12:04:05.820] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:04:05.824] [ERROR] application - TypeError: Cannot read property 'file' of undefined
+    at Application.<anonymous> (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\app\index.js:78:36)
+    at Application.emit (events.js:315:20)
+    at jwtParserAuth (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\middleware\user.middleware.js:79:35)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:425:16
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:430:31)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:22) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-11T12:10:40.598] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:11:08.203] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:11:20.727] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:12:07.425] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:12:19.502] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:13:23.841] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:13:40.169] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:16:28.376] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:16:47.529] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:19:04.173] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:20:34.368] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:31:42.762] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:31:42.765] [ERROR] application - TypeError: Cannot convert object to primitive value
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\app\index.js:86:83
+    at Array.forEach (<anonymous>)
+    at Application.<anonymous> (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\app\index.js:84:27)
+    at Application.emit (events.js:315:20)
+    at jwtParserAuth (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\middleware\user.middleware.js:79:35)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:425:16
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:430:31) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-11T12:33:07.299] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:33:07.304] [ERROR] application - TypeError: Cannot convert object to primitive value
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\app\index.js:86:83
+    at Array.forEach (<anonymous>)
+    at Application.<anonymous> (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\app\index.js:84:27)
+    at Application.emit (events.js:315:20)
+    at jwtParserAuth (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\middleware\user.middleware.js:79:35)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:425:16
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:430:31) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-11T12:37:33.102] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:40:00.264] [ERROR] application - Error: 测试错误
+    at jwtParserAuth (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\middleware\user.middleware.js:77:15)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:425:16
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:430:31)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at cors (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\cors\index.js:108:22)
+    at async C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\app\index.js:48:5
+    at async serve (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-static\index.js:53:9) {
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
+[2024-01-11T12:42:01.955] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T12:45:03.622] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T15:53:16.909] [ERROR] application - { code: 401, message: '无token，请重新登录', result: '' }
+[2024-01-11T15:53:16.914] [ERROR] application - TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+    at Object.unlinkSync (fs.js:1126:10)
+    at Application.<anonymous> (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\app\index.js:88:12)
+    at Application.emit (events.js:315:20)
+    at jwtParserAuth (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\middleware\user.middleware.js:79:35)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:425:16
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\@koa\router\lib\router.js:430:31)
+    at dispatch (C:\Users\v_yutavoxie\Desktop\开发常用操作\nodePsql\node_modules\koa-compose\index.js:42:32) {
+  code: 'ERR_INVALID_ARG_TYPE',
+  headers: {
+    'Access-Control-Allow-Origin': 'http://localhost:8000',
+    'Access-Control-Allow-Credentials': 'true',
+    vary: 'Origin'
+  }
+}
