@@ -71,7 +71,6 @@ app.use(async (ctx, next) => {
 // 任何一个中间件发生错误，都会触发error事件，进入错误监听
 // 也可以通过ctx.app.emit('error', err, ctx)手动触发error事件传递上下文和错误信息
 app.on('error', (err, ctx) => {
-    console.log('进入错误监听111');
     // 利用logger.error打印错误日志
     logger.error(err);
     // 返回错误结果
@@ -81,15 +80,17 @@ app.on('error', (err, ctx) => {
     const file = ctx.request.files ? ctx.request.files.file : null;
     console.log(file instanceof Object, file instanceof Array);
     if(file) {
-        fs.appendFileSync(path.join(__dirname, './file1.json'), JSON.stringify(file), (err) => {
-            if(!err) console.log('写入成功');
-        });
-        // 删除上传文件
-        fs.unlinkSync(file.filepath);
-        ctx.body = {
-            code: 500,
-            msg: '服务器错误',
-            err: file
+        // fs.appendFileSync(path.join(__dirname, './file.json'), JSON.stringify(file), (err) => {
+        //     if(!err) console.log('写入成功');
+        // });
+        // 判断上传文件是否为数组
+        if(file instanceof Array) {
+            file.forEach(item => {
+                // 删除上传文件
+                fs.unlinkSync(item.filepath);
+            })
+        } else {
+            fs.unlinkSync(file.filepath);
         }
     }
 });

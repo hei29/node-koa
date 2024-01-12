@@ -58,5 +58,10 @@ module.exports = {
         code: 500,
         message: '文件上传失败',
         result: ''
+    },
+    unsupportedFileType: {
+        code: 400,
+        message: '不支持的文件类型',
+        result: ''
     }
 }
