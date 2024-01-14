@@ -1,3 +1,0 @@
-[2023-09-27T18:48:56.878] [INFO] access - ::1 - - "GET / HTTP/1.1" 404 - "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
-[2023-09-27T18:48:57.464] [INFO] access - ::1 - - "GET /favicon.ico HTTP/1.1" 404 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
-[2023-09-27T18:53:41.835] [INFO] access - ::1 - - "GET /userinfo/list HTTP/1.1" 200 157 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"

@@ -1,1 +1,0 @@
-[2023-11-16T10:37:28.915] [INFO] access - 127.0.0.1 - - "GET /userinfo/getapi HTTP/1.1" 200 73 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"

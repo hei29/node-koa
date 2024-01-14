@@ -1,5 +1,0 @@
-[2023-12-06T17:40:54.732] [INFO] access - ::1 - - "GET /userinfo/list HTTP/1.1" 200 1210 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
-[2023-12-06T17:40:54.871] [INFO] access - ::1 - - "GET /favicon.ico HTTP/1.1" 404 - "http://localhost:3000/userinfo/list" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
-[2023-12-06T17:50:11.755] [INFO] access - ::1 - - "GET /userinfo/list HTTP/1.1" 200 157 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
-[2023-12-06T17:50:26.410] [INFO] access - ::1 - - "GET /userinfo/list HTTP/1.1" 200 1210 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
-[2023-12-06T17:53:45.817] [INFO] access - ::1 - - "GET /userinfo/list HTTP/1.1" 200 157 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"

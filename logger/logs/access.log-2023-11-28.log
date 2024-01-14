@@ -1,1 +1,0 @@
-[2023-11-28T15:10:46.873] [INFO] access - ::1 - - "GET /hero/list HTTP/1.1" 200 235 "" "PostmanRuntime/7.35.0"

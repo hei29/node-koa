@@ -1,4 +1,0 @@
-[2023-11-15T12:04:32.943] [INFO] access - 127.0.0.1 - - "GET /userinfo/getapi HTTP/1.1" 200 73 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
-[2023-11-15T14:28:21.064] [INFO] access - 127.0.0.1 - - "GET /userinfo/getapi HTTP/1.1" 200 73 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
-[2023-11-15T14:28:57.996] [INFO] access - 127.0.0.1 - - "GET /userinfo/getapi HTTP/1.1" 200 73 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
-[2023-11-15T14:37:35.483] [INFO] access - 127.0.0.1 - - "GET /userinfo/getapi HTTP/1.1" 200 73 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
