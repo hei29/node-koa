@@ -4,17 +4,29 @@ const { JWTSECRETKEY } = require('../config/config.default.js');
 const bcrypt = require('bcryptjs');
 const { create, selectAll, update, dele } = require('../server/user.server.js');
 const {
-    apiServerErr
+    apiServerErr,
+    paramsValidateError
 } = require('../constant/err.type.js');
 
 class Controller {
     async list(ctx, next) {
-        const params = ctx.request.query;
-        const res = await selectAll(params);
-        ctx.body = {
-            status: 200,
-            message: '获取成功',
-            data: res
+        try {
+            ctx.verifyParams({
+                id: { type: 'int', required: false },
+                username: { type: 'string', required: false },
+                age: { type: 'int', required: false },
+                isAdmin: { type: 'boolean', required: false},
+                gender: { type: 'boolean', required: false }
+            })
+            const params = ctx.request.query;
+            const res = await selectAll(params);
+            ctx.body = {
+                status: 200,
+                message: '获取成功',
+                data: res
+            }
+        } catch (error) {
+            return ctx.app.emit('error', paramsValidateError, ctx)
         }
     }
 
@@ -41,6 +53,13 @@ class Controller {
 
     async register(ctx, next) {
         try {
+            ctx.verifyParams({
+                username: { type: 'string', required: true },
+                password: { type: 'string', required: true },
+                age: { type: 'int', required: false },
+                isAdmin: { type: 'boolean', required: false},
+                gender: { type: 'boolean', required: false }
+            })
             const res = await create(ctx.request.body);
             ctx.body = {
                 code: 200,
@@ -51,6 +70,7 @@ class Controller {
                 }
             }
         } catch (error) {
+            if (error.name === 'UnprocessableEntityError') return ctx.app.emit('error', paramsValidateError, ctx)
             ctx.app.emit('error', apiServerErr, ctx);
         }
     }

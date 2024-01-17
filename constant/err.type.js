@@ -63,5 +63,10 @@ module.exports = {
         code: 400,
         message: '不支持的文件类型',
         result: ''
+    },
+    paramsValidateError: {
+        code: 422,
+        message: '参数校验失败',
+        result: ''
     }
 }

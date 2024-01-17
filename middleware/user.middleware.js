@@ -11,7 +11,8 @@ const {
     tokenExpiredError,
     jsonWebTokenError,
     tokenError,
-    isNotAdmin
+    isNotAdmin,
+    paramsValidateError
 } = require('../constant/err.type.js');
 const { getUserInfo } = require('../server/user.server.js');
 
@@ -49,8 +50,12 @@ class UserMiddleware {
 
     // 校验用户登录
     async verifyLogin(ctx, next) {
-        const { username, password } = ctx.request.body;
         try {
+            ctx.verifyParams({
+                username: { type: 'string', required: true },
+                password: { type: 'string', required: true }
+            })
+            const { username, password } = ctx.request.body;
             // 1.判断用户名是否存在
             const res = await getUserInfo({ username });
             ctx.request.body = res;
@@ -66,6 +71,7 @@ class UserMiddleware {
                 return
             }
         } catch (error) {
+            if (error.name === 'UnprocessableEntityError') return ctx.app.emit('error', paramsValidateError, ctx)
             return ctx.app.emit('error', userLoginError, ctx);
         }
         await next();

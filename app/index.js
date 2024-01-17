@@ -3,18 +3,18 @@ const path = require('path');
 const fs = require('fs');
 // 引入解析post的模块
 const { koaBody } = require('koa-body');
-const koaStatic = require('koa-static');
 const onerror = require('koa-onerror');
 const static = require('koa-static');
 const cors = require('@koa/cors');
 const session = require('koa-session');
+const paramstetter = require('koa-parameter');
 const {accessLogger, logger} = require('../logger/index.js');
 
 const router = require('../router');
 
 const app = new koa();
 
-app.use(static(__dirname + '/public')); // 配置静态资源目录
+app.use(static(__dirname + '../public/uploads')); // 配置静态资源目录
 // 配置错误处理中间件
 onerror(app);
 // 配置访问日志中间件
@@ -39,8 +39,8 @@ app.use(koaBody({
         keepExtensions: true, // 保持文件的后缀
     }
 }));
-app.use(koaStatic(path.join(__dirname, '../public/uploads')));
-
+app.use(paramstetter(app)); // 配置参数校验中间件
+// 解析post请求的body，将字符串转换为json对象
 app.use(async (ctx, next) => {
     if(typeof ctx.request.body === 'string') {
         ctx.request.body = JSON.parse(ctx.request.body);
@@ -78,7 +78,6 @@ app.on('error', (err, ctx) => {
     ctx.body = err
     // 判断是否有上传文件，如果有，删除上传的文件
     const file = ctx.request.files ? ctx.request.files.file : null;
-    console.log(file instanceof Object, file instanceof Array);
     if(file) {
         // fs.appendFileSync(path.join(__dirname, './file.json'), JSON.stringify(file), (err) => {
         //     if(!err) console.log('写入成功');
