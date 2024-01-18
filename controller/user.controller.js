@@ -10,24 +10,24 @@ const {
 
 class Controller {
     async list(ctx, next) {
-        try {
-            ctx.verifyParams({
-                id: { type: 'int', required: false },
-                username: { type: 'string', required: false },
-                age: { type: 'int', required: false },
-                isAdmin: { type: 'boolean', required: false},
-                gender: { type: 'boolean', required: false }
-            })
-            const params = ctx.request.query;
+        const params = ctx.request.query;
             const res = await selectAll(params);
             ctx.body = {
                 status: 200,
                 message: '获取成功',
                 data: res
             }
-        } catch (error) {
-            return ctx.app.emit('error', paramsValidateError, ctx)
-        }
+        // try {
+        //     ctx.verifyParams({
+        //         id: { type: 'string', required: false, allowEmpty: true },
+        //         username: { type: 'string', required: false, allowEmpty: true },
+        //         age: { type: 'string', required: false, allowEmpty: true },
+        //         isAdmin: { type: 'string', required: false, allowEmpty: true },
+        //         gender: { type: 'string', required: false, allowEmpty: true }
+        //     })
+        // } catch (error) {
+        //     return ctx.app.emit('error', paramsValidateError, ctx)
+        // }
     }
 
     async login(ctx, next) {

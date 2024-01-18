@@ -11,6 +11,7 @@ class UserServer{
         id && Object.assign(whereOpt, { id })
         username && Object.assign(whereOpt, { username })
         isAdmin && Object.assign(whereOpt, { isAdmin })
+        console.log(whereOpt);
         const res = await User.findAll({
             where: whereOpt
         });
