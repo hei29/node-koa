@@ -68,5 +68,20 @@ module.exports = {
         code: 422,
         message: '参数校验失败',
         result: ''
+    },
+    addGoodsError: {
+        code: 500,
+        message: '添加商品失败',
+        result: ''
+    },
+    updateGoodsError: {
+        code: 500,
+        message: '修改商品失败',
+        result: ''
+    },
+    validGoodsID: {
+        code: 400,
+        message: '商品ID不合法',
+        result: ''
     }
 }

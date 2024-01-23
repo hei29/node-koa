@@ -7,6 +7,20 @@ class GoodsServer {
         })
         return res;
     }
+
+    async add(params) {
+        const res = await Goods.create(params);
+        return res;
+    }
+
+    async update(id, params) {
+        const res = await Goods.update(params, {
+            where: {
+                id
+            }
+        })
+        return res;
+    }
 }
 
 module.exports = new GoodsServer();
