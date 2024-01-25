@@ -81,7 +81,12 @@ module.exports = {
     },
     validGoodsID: {
         code: 400,
-        message: '商品ID不合法',
+        message: '无效的商品ID',
+        result: ''
+    },
+    removeGoodsError: {
+        code: 500,
+        message: '商品移除失败',
         result: ''
     }
 }

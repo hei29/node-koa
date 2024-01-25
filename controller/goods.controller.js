@@ -1,5 +1,5 @@
-const { selcetAll, add, update } = require('../server/goods.server.js');
-const { addGoodsError, updateGoodsError, validGoodsID } = require('../constant/err.type.js');
+const { selcetAll, add, update, remove } = require('../server/goods.server.js');
+const { addGoodsError, updateGoodsError, validGoodsID, removeGoodsError } = require('../constant/err.type.js');
 
 class Controller {
     async list(ctx) {
@@ -29,7 +29,7 @@ class Controller {
     async updateGoods(ctx) {
         try {
             const res = await update(ctx.params.id, ctx.request.body);
-            if(res[0]) {
+            if(res) {
                 ctx.body = {
                     status: 200,
                     message: '修改成功',
@@ -41,6 +41,23 @@ class Controller {
             
         } catch (error) {
             ctx.app.emit('error', updateGoodsError, ctx)
+        }
+    }
+
+    async removeGoods(ctx) {
+        try {
+            const res = await remove(ctx.params.id)
+            if (res) {
+                ctx.body = {
+                    status: 200,
+                    message: '商品移除成功',
+                    data: res
+                }
+            } else {
+                return ctx.app.emit('error', validGoodsID, ctx, { errApi: 'goods.controller-removeGoods' })
+            }
+        } catch (error) {
+            ctx.app.emit('error', removeGoodsError, ctx, { errApi: 'goods.controller-removeGoods', error })
         }
     }
 }

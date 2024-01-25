@@ -22,7 +22,7 @@ const Goods = sequelize.define('goods', {
         type: DataTypes.STRING,
         allowNull: false,
         comment: '商品图片的url'
-    },
+    }
 })
 
 // Goods.sync({alter: true})

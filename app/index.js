@@ -70,9 +70,9 @@ app.use(async (ctx, next) => {
 // 错误监听，后台报错
 // 任何一个中间件发生错误，都会触发error事件，进入错误监听
 // 也可以通过ctx.app.emit('error', err, ctx)手动触发error事件传递上下文和错误信息
-app.on('error', (err, ctx) => {
+app.on('error', (err, ctx, info) => {
     // 利用logger.error打印错误日志
-    logger.error(err);
+    logger.error(err, info);
     // 返回错误结果
     ctx.status = err.code || err.status || 500;
     ctx.body = err

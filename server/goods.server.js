@@ -19,6 +19,13 @@ class GoodsServer {
                 id
             }
         })
+        // res[0] 为受影响的行数
+        return res[0] > 0 ? true : false;
+    }
+
+    async remove(id) {
+        const res = await Goods.destroy({where: {id}});
+        // res 为受影响的行数
         return res;
     }
 }
