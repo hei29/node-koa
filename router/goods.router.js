@@ -1,14 +1,25 @@
 const Router = require('@koa/router');
 const router = new Router({prefix: '/goods'});
-const { list, addGoods, updateGoods, removeGoods } = require('../controller/goods.controller');
+const { 
+    list, 
+    addGoods, 
+    updateGoods, 
+    removeGoods, 
+    restoreGoods,
+    findAll
+} = require('../controller/goods.controller');
 const { jwtParserAuth, isAdmin } = require('../middleware/user.middleware');
-const { validateGoodsParams } = require('../middleware/goods.middleware');
+const { validator } = require('../middleware/goods.middleware');
 
 router.get('/list', list)
-router.post('/add', validateGoodsParams, jwtParserAuth, isAdmin, addGoods)
-router.put('/:id', validateGoodsParams, jwtParserAuth, isAdmin, updateGoods)
+router.post('/add', validator, jwtParserAuth, isAdmin, addGoods)
+router.put('/:id', validator, jwtParserAuth, isAdmin, updateGoods)
 // 删除商品
-router.delete('/:id', jwtParserAuth, isAdmin, removeGoods)
-// 删除商品方法二
+// router.delete('/:id', jwtParserAuth, isAdmin, removeGoods)
+// 下架商品
+router.post('/:id/off', jwtParserAuth, isAdmin, removeGoods)
+// 上架商品
+router.post('/:id/on', jwtParserAuth, isAdmin, restoreGoods)
+router.get('/', findAll)
 
 module.exports = router;

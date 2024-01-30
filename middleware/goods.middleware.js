@@ -1,7 +1,7 @@
 const { paramsValidateError } = require('../constant/err.type');
 
-class goodsMiddleware {
-    async validateGoodsParams(ctx, next) {
+class GoodsMiddleware {
+    async validator(ctx, next) {
         try {
             ctx.verifyParams({
                 goods_name: { type: 'string', required: true },
@@ -16,4 +16,4 @@ class goodsMiddleware {
     }
 }
 
-module.exports = new goodsMiddleware();
+module.exports = new GoodsMiddleware();

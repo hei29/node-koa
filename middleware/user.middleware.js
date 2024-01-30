@@ -48,7 +48,7 @@ class UserMiddleware {
         await next();
     }
 
-    // 校验用户登录
+    // 校验用户登录（账号密码是否正确）
     async verifyLogin(ctx, next) {
         try {
             ctx.verifyParams({
@@ -78,14 +78,14 @@ class UserMiddleware {
     }
 
 
-    // 解析token
+    // 解析token(验证是否登录)
     async jwtParserAuth(ctx, next) {
         const { authorization } = ctx.request.header;
         const token = authorization ? authorization.replace('Bearer ', '') : '';
         if(!token) return ctx.app.emit('error', isNotToken, ctx)
         try {
             const data = jwt.verify(token, JWTSECRETKEY);
-            ctx.request.auth = data;
+            ctx.state.auth = data;
         } catch (error) {
             switch(error.name) {
                 case 'TokenExpiredError':
@@ -103,7 +103,7 @@ class UserMiddleware {
     }
 
     async isAdmin(ctx, next) {
-        const { isAdmin } = ctx.request.auth;
+        const { isAdmin } = ctx.state.auth;
         if(!isAdmin) return ctx.app.emit('error', isNotAdmin, ctx)
         await next();
     }

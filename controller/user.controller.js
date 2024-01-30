@@ -13,7 +13,7 @@ class Controller {
         const params = ctx.request.query;
             const res = await selectAll(params);
             ctx.body = {
-                status: 200,
+                code: 0,
                 message: '获取成功',
                 data: res
             }
@@ -45,7 +45,7 @@ class Controller {
         })
 
         ctx.body = {
-            code: 200,
+            code: 0,
             message: '登录成功',
             token
         }
@@ -62,7 +62,7 @@ class Controller {
             })
             const res = await create(ctx.request.body);
             ctx.body = {
-                code: 200,
+                code: 0,
                 message: '注册成功',
                 data: {
                     id: res.id,
@@ -77,12 +77,12 @@ class Controller {
 
     async modifyUser(ctx, next) {
         try {
-            const { username } = ctx.request.auth;
+            const { username } = ctx.state.auth;
             const { password, ...params } = ctx.request.body;
             const res = await update({ username }, params);
             if (res) {
                 ctx.body = {
-                    status: 200,
+                    code: 0,
                     message: '修改成功',
                     data: res
                 }
@@ -94,12 +94,12 @@ class Controller {
     
     async changePassword(ctx, next) {
         try {
-            const { username } = ctx.request.auth;
+            const { username } = ctx.state.auth;
             const { password } = ctx.request.body;
             const res = await update({ username }, { password });
             if(res) {
                 ctx.body = {
-                    status: 200,
+                    code: 0,
                     message: '修改成功',
                     data: res
                 }
@@ -123,7 +123,7 @@ class Controller {
             const res = await update({ id }, { password: hash });
             if (res) {
                 ctx.body = {
-                    status: 200,
+                    code: 0,
                     message: '重置成功',
                     result: res
                 }
@@ -142,7 +142,7 @@ class Controller {
             const res = await dele(id);
             if (res) {
                 ctx.body = {
-                    status: 200,
+                    code: 0,
                     message: '删除成功'
                 }
             }

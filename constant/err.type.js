@@ -86,7 +86,12 @@ module.exports = {
     },
     removeGoodsError: {
         code: 500,
-        message: '商品移除失败',
+        message: '商品下架失败',
+        result: ''
+    },
+    restoreGoodsError: {
+        code: 500,
+        message: '商品上架失败',
         result: ''
     }
 }

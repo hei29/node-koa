@@ -22,9 +22,35 @@ const Goods = sequelize.define('goods', {
         type: DataTypes.STRING,
         allowNull: false,
         comment: '商品图片的url'
+    },
+    create_time: {
+        type: DataTypes.DATE,
+        allowNull: true,
+        comment: '创建时间'
+    },
+    update_time: {
+        type: DataTypes.DATE,
+        allowNull: true,
+        comment: '更新时间'
+    },
+    delete_time: {
+        type: DataTypes.DATE,
+        allowNull: true,
+        comment: '删除时间'
     }
+}, {
+    // (paranoid: true 会使删除变为软删除)使用模型的destory方法删除数据时，不会真正的删除数据，而是设置一个deletedAt字段，表示删除的时间
+    paranoid: true, // 不删除数据库条目,但将新添加的属性deletedAt设置为当前日期(删除完成时). 
+    freezeTableName: true, // 禁止修改表名
+    // timestamps: true, // 添加时间戳属性 (updatedAt, createdAt)默认为true
+    createdAt: 'create_time', // 将createdAt字段改个名
+    updatedAt: 'update_time', // 将updatedAt字段改个名
+    deletedAt: 'delete_time', // 将deletedAt字段改个名
+    underscored: true, // 将自动设置所有属性的字段参数为下划线命名方式.
+    comment: '商品表'
 })
 
-// Goods.sync({alter: true})
+// Goods.sync({force: true})
 
 module.exports = Goods;
+
