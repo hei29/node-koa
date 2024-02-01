@@ -12,11 +12,14 @@ const {
 } = require('../middleware/cart.middleware')
 // 控制器
 const {
-    add
+    add,
+    cartsList
 } = require('../controller/cart.controller')
 
 // 编写路由
 // 添加购物车 登录 格式校验
 router.post('/', jwtParserAuth, validator, add)
+// 购物车列表
+router.get('/', jwtParserAuth, cartsList)
 // 导出路由
 module.exports = router

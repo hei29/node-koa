@@ -26,17 +26,21 @@ const Goods = sequelize.define('goods', {
     create_time: {
         type: DataTypes.DATE,
         allowNull: true,
-        comment: '创建时间'
+        comment: '创建时间',
+        defaultValue: DataTypes.NOW,
+        // field: 'create_time' // 指定字段名，不然会使用默认字段createAt
     },
     update_time: {
         type: DataTypes.DATE,
         allowNull: true,
-        comment: '更新时间'
+        comment: '更新时间',
+        defaultValue: DataTypes.NOW,
+        // field: 'update_time'
     },
     delete_time: {
         type: DataTypes.DATE,
         allowNull: true,
-        comment: '删除时间'
+        comment: '删除时间',
     }
 }, {
     // (paranoid: true 会使删除变为软删除)使用模型的destory方法删除数据时，不会真正的删除数据，而是设置一个deletedAt字段，表示删除的时间

@@ -1,4 +1,4 @@
-const { createOrUpdateCart } = require('../server/cart.server');
+const { createOrUpdateCart, findCarts } = require('../server/cart.server');
 
 class CartController {
     async add(ctx) {
@@ -16,6 +16,17 @@ class CartController {
             }
         } catch (error) {
             console.log(error);
+        }
+    }
+
+    async cartsList(ctx) {
+        const { id } = ctx.state.auth;
+        const res = await findCarts(id);
+
+        ctx.body = {
+            code: 0,
+            message: '获取购物车列表成功',
+            data: res
         }
     }
 }

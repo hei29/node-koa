@@ -1,5 +1,6 @@
 const sequelize = require('../db/seq');
 const { DataTypes } = require('sequelize');
+const Goods = require('./goods.model');
 
 const Cart = sequelize.define('carts', {
     goods_id: {
@@ -27,5 +28,9 @@ const Cart = sequelize.define('carts', {
 })
 
 // Cart.sync({force: true})
+Cart.belongsTo(Goods, {
+    foreignKey: 'goods_id',
+    as: 'goods_info'
+})
 
 module.exports = Cart;
