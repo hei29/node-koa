@@ -27,15 +27,13 @@ const Goods = sequelize.define('goods', {
         type: DataTypes.DATE,
         allowNull: true,
         comment: '创建时间',
-        defaultValue: DataTypes.NOW,
-        // field: 'create_time' // 指定字段名，不然会使用默认字段createAt
+        defaultValue: DataTypes.NOW
     },
     update_time: {
         type: DataTypes.DATE,
         allowNull: true,
         comment: '更新时间',
-        defaultValue: DataTypes.NOW,
-        // field: 'update_time'
+        defaultValue: DataTypes.NOW
     },
     delete_time: {
         type: DataTypes.DATE,

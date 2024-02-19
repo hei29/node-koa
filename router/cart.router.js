@@ -13,13 +13,23 @@ const {
 // 控制器
 const {
     add,
-    cartsList
+    findAll,
+    update
 } = require('../controller/cart.controller')
 
 // 编写路由
 // 添加购物车 登录 格式校验
-router.post('/', jwtParserAuth, validator, add)
-// 购物车列表
-router.get('/', jwtParserAuth, cartsList)
+router.post('/', jwtParserAuth, validator({
+    goods_id: 'number'
+}), add)
+
+// 获取购物车列表
+router.get('/', jwtParserAuth, findAll)
+
+// 更新购物车
+router.patch('/:id', jwtParserAuth, validator({
+    number: { type: 'number', required: false },
+    selected: { type: 'boolean', required: false }
+}), update)
 // 导出路由
 module.exports = router

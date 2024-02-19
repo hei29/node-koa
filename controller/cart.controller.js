@@ -1,4 +1,4 @@
-const { createOrUpdateCart, findCarts } = require('../server/cart.server');
+const { createOrUpdateCart, findCarts, updateCart } = require('../server/cart.server');
 
 class CartController {
     async add(ctx) {
@@ -19,7 +19,7 @@ class CartController {
         }
     }
 
-    async cartsList(ctx) {
+    async findAll(ctx) {
         const { id } = ctx.state.auth;
         const res = await findCarts(id);
 
@@ -27,6 +27,22 @@ class CartController {
             code: 0,
             message: '获取购物车列表成功',
             data: res
+        }
+    }
+
+    async update(ctx) {
+        // 解析参数
+        const { id } = ctx.params;
+        const { number, selected } = ctx.request.body;
+        // 操作数据库
+        const res = await updateCart({ id, number, selected });
+        // 返回结果
+        if(res) {
+            ctx.body = {
+                code: 0,
+                message: '更新购物车成功',
+                data: res
+            }
         }
     }
 }

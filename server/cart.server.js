@@ -28,6 +28,7 @@ class CartServer {
                 where: {
                     user_id
                 },
+                attributes: ['id', 'user_id', 'number', 'selected'],
                 include: {
                     model: Goods,
                     as: 'goods_info',
@@ -38,6 +39,14 @@ class CartServer {
         } catch (error) {
             console.log(error);
         }
+    }
+
+    async updateCart(params) {
+        const { id, number, selected } = params;
+        const res = await Cart.findByPk(id);
+        number ? res.number = number : null;
+        selected !== undefined ? res.selected = selected : null;
+        return await res.save();
     }
 }
 
