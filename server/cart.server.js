@@ -44,9 +44,30 @@ class CartServer {
     async updateCart(params) {
         const { id, number, selected } = params;
         const res = await Cart.findByPk(id);
-        number ? res.number = number : null;
+        if(!res) return null;
+        number !== undefined ? res.number = number : null;
         selected !== undefined ? res.selected = selected : null;
         return await res.save();
+    }
+
+    async removeCarts(ids) {
+        return await Cart.destroy({
+            where: {
+                id: {
+                    [Op.in]: ids
+                }
+            }
+        })
+    }
+
+    async isSelectAllCarts(user_id, selected) {
+        return await Cart.update({
+            selected
+        }, {
+            where: {
+                user_id
+            }
+        })
     }
 }
 

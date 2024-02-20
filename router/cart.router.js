@@ -14,7 +14,9 @@ const {
 const {
     add,
     findAll,
-    update
+    update,
+    remove,
+    isSelectAll
 } = require('../controller/cart.controller')
 
 // 编写路由
@@ -31,5 +33,15 @@ router.patch('/:id', jwtParserAuth, validator({
     number: { type: 'number', required: false },
     selected: { type: 'boolean', required: false }
 }), update)
+
+// 删除购物车
+router.delete('/', jwtParserAuth, validator({
+    ids: { type: 'array', itemType: 'number', required: true }
+}), remove)
+
+// 全选或全不选购物车
+router.post('/isSelectAll', jwtParserAuth, validator({
+    selected: 'boolean'
+}), isSelectAll)
 // 导出路由
 module.exports = router

@@ -40,7 +40,6 @@ class GoodsServer {
     }
 
     async findGoods(pageNum, pageSize) {
-        console.log(pageSize, typeof pageSize);
         const { count: total, rows: list } = await Goods.findAndCountAll({
             offset: (pageNum - 1) * pageSize,
             limit: pageSize

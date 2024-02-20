@@ -37,7 +37,8 @@ app.use(koaBody({
         // 尽量不要使用相对路径，这里的相对路径是相对于process.cwd()的，即项目根目录
         uploadDir: path.join(__dirname, '../public/uploads'), // 设置文件上传目录
         keepExtensions: true, // 保持文件的后缀
-    }
+    },
+    parsedMethods: ['POST', 'PUT', 'PATCH', 'DELETE'], // 解析的请求方法，将参数解析到ctx.request.body中
 }));
 app.use(paramstetter(app)); // 配置参数校验中间件
 // 解析post请求的body，将字符串转换为json对象
