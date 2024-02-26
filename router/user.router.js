@@ -20,9 +20,11 @@ const {
     userController, 
     bcryptPassword,
     verifyLogin,
+} = require('../middleware/user.middleware.js');
+const {
     jwtParserAuth,
     isAdmin
-} = require('../middleware/user.middleware.js');
+} = require('../middleware/utils.middleware')
 
 // 永久重定向301，临时重定向302
 router.get('/', ctx => {

@@ -93,5 +93,10 @@ module.exports = {
         code: 500,
         message: '商品上架失败',
         result: ''
+    },
+    addressParamsValidateError: {
+        code: 10401,
+        message: '地址参数校验失败',
+        result: ''
     }
 }

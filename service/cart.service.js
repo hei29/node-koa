@@ -2,7 +2,7 @@ const { Op } = require('sequelize');
 const Cart = require('../model/cart.model');
 const Goods = require('../model/goods.model');
 
-class CartServer {
+class CartService {
     async createOrUpdateCart(user_id, goods_id) {
         const res = await Cart.findOne({
             where: {
@@ -71,4 +71,4 @@ class CartServer {
     }
 }
 
-module.exports = new CartServer();
+module.exports = new CartService();

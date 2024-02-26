@@ -1,20 +1,14 @@
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const { JWTSECRETKEY } = require('../config/config.default.js');
+
 const { 
     userFormatEmpty, 
     userRepitition,
     userNotFound,
     userLoginError,
     invalidPassword,
-    isNotToken,
-    tokenExpiredError,
-    jsonWebTokenError,
-    tokenError,
-    isNotAdmin,
     paramsValidateError
 } = require('../constant/err.type.js');
-const { getUserInfo } = require('../server/user.server.js');
+const { getUserInfo } = require('../service/user.service.js');
 
 class UserMiddleware {
     // 判断用户名密码是否为空
@@ -74,37 +68,6 @@ class UserMiddleware {
             if (error.name === 'UnprocessableEntityError') return ctx.app.emit('error', paramsValidateError, ctx)
             return ctx.app.emit('error', userLoginError, ctx);
         }
-        await next();
-    }
-
-
-    // 解析token(验证是否登录)
-    async jwtParserAuth(ctx, next) {
-        const { authorization } = ctx.request.header;
-        const token = authorization ? authorization.replace('Bearer ', '') : '';
-        if(!token) return ctx.app.emit('error', isNotToken, ctx)
-        try {
-            const data = jwt.verify(token, JWTSECRETKEY);
-            ctx.state.auth = data;
-        } catch (error) {
-            switch(error.name) {
-                case 'TokenExpiredError':
-                    ctx.app.emit('error', tokenExpiredError, ctx);
-                    break;
-                case 'JsonWebTokenError':
-                    ctx.app.emit('error', jsonWebTokenError, ctx);
-                    break;
-                default:
-                    ctx.app.emit('error', tokenError, ctx);
-            }
-            return;
-        }
-        await next();
-    }
-
-    async isAdmin(ctx, next) {
-        const { isAdmin } = ctx.state.auth;
-        if(!isAdmin) return ctx.app.emit('error', isNotAdmin, ctx)
         await next();
     }
 }

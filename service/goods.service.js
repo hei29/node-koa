@@ -1,6 +1,6 @@
 const Goods = require('../model/goods.model.js');
 
-class GoodsServer {
+class GoodsService {
     async selcetAll(params) {
         try {
             const res = await Goods.findAll({
@@ -53,4 +53,4 @@ class GoodsServer {
     }
 }
 
-module.exports = new GoodsServer();
+module.exports = new GoodsService();

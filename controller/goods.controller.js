@@ -5,7 +5,7 @@ const {
     remove,
     restore ,
     findGoods
-} = require('../server/goods.server.js');
+} = require('../service/goods.service.js');
 const { 
     addGoodsError, 
     updateGoodsError, 

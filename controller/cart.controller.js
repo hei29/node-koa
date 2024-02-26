@@ -4,7 +4,7 @@ const {
     updateCart,
     removeCarts,
     isSelectAllCarts
-} = require('../server/cart.server');
+} = require('../service/cart.service');
 
 class CartController {
     async add(ctx) {

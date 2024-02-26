@@ -1,6 +1,6 @@
 const User = require('../model/user.model.js');
 
-class UserServer{
+class UserService{
     async create(params) {
         const res = await User.create(params);
         return res;
@@ -47,4 +47,4 @@ class UserServer{
     }
 }
 
-module.exports = new UserServer();
+module.exports = new UserService();

@@ -75,7 +75,7 @@ app.on('error', (err, ctx, info) => {
     // 利用logger.error打印错误日志
     logger.error(err, info);
     // 返回错误结果
-    ctx.status = err.code || err.status || 500;
+    // ctx.status = err.status || 500;
     ctx.body = err
     // 判断是否有上传文件，如果有，删除上传的文件
     const file = ctx.request.files ? ctx.request.files.file : null;

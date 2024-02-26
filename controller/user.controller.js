@@ -2,7 +2,7 @@ const db = require('../db/seq.js');
 const jwt = require('jsonwebtoken');
 const { JWTSECRETKEY } = require('../config/config.default.js');
 const bcrypt = require('bcryptjs');
-const { create, selectAll, update, dele } = require('../server/user.server.js');
+const { create, selectAll, update, dele } = require('../service/user.service.js');
 const {
     apiServerErr,
     paramsValidateError
@@ -17,17 +17,6 @@ class Controller {
                 message: '获取成功',
                 data: res
             }
-        // try {
-        //     ctx.verifyParams({
-        //         id: { type: 'string', required: false, allowEmpty: true },
-        //         username: { type: 'string', required: false, allowEmpty: true },
-        //         age: { type: 'string', required: false, allowEmpty: true },
-        //         isAdmin: { type: 'string', required: false, allowEmpty: true },
-        //         gender: { type: 'string', required: false, allowEmpty: true }
-        //     })
-        // } catch (error) {
-        //     return ctx.app.emit('error', paramsValidateError, ctx)
-        // }
     }
 
     async login(ctx, next) {
