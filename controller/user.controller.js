@@ -8,7 +8,7 @@ const {
     paramsValidateError
 } = require('../constant/err.type.js');
 
-class Controller {
+class UserController {
     async list(ctx, next) {
         const params = ctx.request.query;
             const res = await selectAll(params);
@@ -142,4 +142,4 @@ class Controller {
 
 }
 
-module.exports = new Controller();
+module.exports = new UserController();

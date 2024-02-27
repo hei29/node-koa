@@ -6,7 +6,7 @@ const {
     setDefaultAddress
 } = require('../service/address.service');
 
-class adressController {
+class AddressController {
     async add(ctx) {
         // const { consignee, phone, adress, isDefault } = ctx.request.body;
         const { id } = ctx.state.auth;
@@ -66,4 +66,4 @@ class adressController {
     }
 }
 
-module.exports = new adressController();
+module.exports = new AddressController();

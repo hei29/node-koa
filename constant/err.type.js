@@ -98,5 +98,10 @@ module.exports = {
         code: 10401,
         message: '地址参数校验失败',
         result: ''
+    },
+    orderParamsValidateError: {
+        code: 10501,
+        message: '订单参数校验失败',
+        result: ''
     }
 }
